@@ -12,7 +12,7 @@ LEFT = 3
 try:
     while True:
 
-        get_command = requests.get('http://18.222.193.168/commanderEd')
+        get_command = requests.get('http://<IP>/commanderEd')
         print(get_command.text+','+str(get_command.status_code))
         if get_command.status_code == 200:
             command = get_command.text
